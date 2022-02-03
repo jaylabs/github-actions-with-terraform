@@ -9,8 +9,8 @@ on:
         type: choice
         description: 'Are you sure?'
         options: 
-        - no
-        - yes
+        - 'NO'
+        - 'YES'
 
 jobs:
   # This workflow contains a single job called "greet"
