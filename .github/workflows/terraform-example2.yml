@@ -1,4 +1,4 @@
-name: 'Terraform Validation'
+name: 'Terraform Pipeline - 2'
 
 on:
   push:
