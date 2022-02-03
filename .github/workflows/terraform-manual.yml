@@ -8,15 +8,17 @@ on:
     inputs:
       name:
         # Friendly description to be shown in the UI instead of 'name'
-        description: 'Are you sure'
-        # Input has to be provided for the workflow to run
-        default: 'yes'
-        required: true
+        type: choice
+        description: Are you sure?
+        options: 
+        - Yes
+        - No
 
 jobs:
   # This workflow contains a single job called "greet"
   approval:
     # The type of runner that the job will run on
+    name: 'Approval'
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
