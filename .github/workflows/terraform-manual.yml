@@ -13,6 +13,11 @@ on:
         options: 
         - Yes
         - No
+      message:
+        required: true
+      use-emoji:
+        type: boolean
+        description: Include  emojis
 
 jobs:
   # This workflow contains a single job called "greet"
