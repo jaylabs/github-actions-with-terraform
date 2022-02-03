@@ -23,7 +23,7 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Approval
-      run: if [ "${{ github.event.inputs.options }}" = "NO" ] ; then exit 1; fi
+      run: if [ "${{ github.event.inputs.options }}" = "NO" ] ; then echo -e "NOT APPROVED" && exit 1; fi
       
   terraform-apply:
     name: 'Terraform Apply'
