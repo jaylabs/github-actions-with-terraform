@@ -4,15 +4,20 @@ name: Terraform Manual Approval
 # or API.
 on:
   workflow_dispatch:
-    # Inputs the workflow accepts.
     inputs:
       name:
-        # Friendly description to be shown in the UI instead of 'name'
         type: choice
-        description: Are you sure?
+        description: Who to greet
         options: 
-        - yes
-        - no
+        - monalisa
+        - cschleiden
+      message:
+        required: true
+      use-emoji:
+        type: boolean
+        description: Include  emojis
+      environment:
+        type: environmen
 
 jobs:
   # This workflow contains a single job called "greet"
@@ -24,8 +29,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
-    - name: Send greeting
-      run: echo "Hello ${{ github.event.inputs.name }}"
+    - name: Approval
+      run: echo "${{ github.event.inputs.message }} ${{ fromJSON('["", ""]')[github.event.inputs.use-emoji == 'true'] }} ${{ github.event.inputs.name }}"
       
   terraform-apply:
     name: 'Terraform Apply'
