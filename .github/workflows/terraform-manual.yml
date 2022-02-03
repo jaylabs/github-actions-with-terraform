@@ -8,8 +8,9 @@ on:
     inputs:
       name:
         # Friendly description to be shown in the UI instead of 'name'
-        description: 'Person to greet'
+        description: 'Are you sure'
         # Input has to be provided for the workflow to run
+        default: 'yes'
         required: true
 
 jobs:
