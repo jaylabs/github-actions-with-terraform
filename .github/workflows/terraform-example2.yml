@@ -9,7 +9,7 @@ on:
 jobs:
 
   terraform-dev:
-    name: '[DEV] Terraform'
+    name: 'Terraform Dev'
     runs-on: ubuntu-latest
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
@@ -44,7 +44,7 @@ jobs:
         GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
         
   terraform-staging:
-    name: '[STAGING] Terraform'
+    name: 'Terraform Staging'
     needs: [terraform-dev]
     runs-on: ubuntu-latest
 
@@ -80,7 +80,7 @@ jobs:
         GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
 
   terraform-production:
-    name: '[PRODUCTION] Terraform'
+    name: 'Terraform Production'
     needs: [terraform-staging]
     runs-on: ubuntu-latest
 
