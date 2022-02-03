@@ -5,19 +5,12 @@ name: Terraform Manual Approval
 on:
   workflow_dispatch:
     inputs:
-      name:
+      options:
         type: choice
-        description: Who to greet
+        description: 'Are you sure?'
         options: 
-        - monalisa
-        - cschleiden
-      message:
-        required: true
-      use-emoji:
-        type: boolean
-        description: Include  emojis
-      environment:
-        type: environmen
+        - no
+        - yes
 
 jobs:
   # This workflow contains a single job called "greet"
@@ -30,7 +23,7 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Approval
-      run: echo "${{ github.event.inputs.message }} ${{ fromJSON('["", ""]')[github.event.inputs.use-emoji == 'true'] }} ${{ github.event.inputs.name }}"
+      run: echo "${{ github.event.inputs.options }}"
       
   terraform-apply:
     name: 'Terraform Apply'
