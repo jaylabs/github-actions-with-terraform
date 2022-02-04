@@ -81,6 +81,7 @@ jobs:
 
   terraform-production:
     name: 'Terraform Production'
+    environment: 'production'    
     needs: [terraform-staging]
     runs-on: ubuntu-latest
 
