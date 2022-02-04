@@ -45,6 +45,7 @@ jobs:
         
   terraform-staging:
     name: 'Terraform Staging'
+    environment: 'staging'    
     needs: [terraform-dev]
     runs-on: ubuntu-latest
 
