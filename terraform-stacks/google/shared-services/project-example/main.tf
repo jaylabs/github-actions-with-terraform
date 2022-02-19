@@ -1,5 +1,5 @@
 #resource "google_storage_bucket" "bucket" {
-  name          = "jaylabs-bucket-exampple"
+  name          = "jaylabs-bucket-example"
   project       = "core-nomad-245305"
   location      = "EU"
   force_destroy = true
