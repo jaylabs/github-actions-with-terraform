@@ -24,9 +24,11 @@ Testing github actions with terraform
      
       B--Google-->C1["Set Provider Credentials"];
       B--Azure-->C2["Set Provider Credentials"];
+      B--AWS-->C2["Set Provider Credentials"];
             
       C1--->W{Which environment?};
       C2-->W{Which environment?};
+      C3-->W{Which environment?};
             
       W--Shared Services-->E1["Set Variables"];
       W--Production-->E2["Set Variables"];
