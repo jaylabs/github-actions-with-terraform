@@ -22,18 +22,18 @@ Testing github actions with terraform
       A[Pull request workflow]-->B{Which cloud provider?};
 
      
-      B--Google-->C1["Set Provider Credentials"];
-      B--Azure-->C2["Set Provider Credentials"];
-      B--AWS-->C2["Set Provider Credentials"];
+      B--Google-->C1["Set gcp credentials"];
+      B--Azure-->C2["Set azure credentials"];
+      B--AWS-->C3["Set aws credentials"];
             
       C1--->W{Which environment?};
       C2-->W{Which environment?};
       C3-->W{Which environment?};
             
-      W--Shared Services-->E1["Set Variables"];
-      W--Production-->E2["Set Variables"];
-      W--Staging-->E3["Set Variables"];
-      W--Development-->E4["Set Variables"];
+      W--Shared Services-->E1["Set shared-services.tfvars"];
+      W--Production-->E2["Set production.tfvars"];
+      W--Staging-->E3["Set staging.tfvars"];
+      W--Development-->E4["Set dev.tfvars"];
       
       E1--->P{Which Project?};
       E2--->P{Which Project?};
