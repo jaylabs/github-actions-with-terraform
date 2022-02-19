@@ -7,25 +7,21 @@ Directory structure example:
 |-- terraform-stacks
     |-- cloud-provider
     |   |-- shared-serices
-    |   |   |-- project
-    |   |   |   |-- modules
-    |   |   |   |-- files.tf
-    |   |   |   |-- shared-services.tfvars    
+    |   |   |-- modules
+    |   |   |-- files.tf
+    |   |   |-- shared-services.tfvars
     |   |-- production
-    |   |   |-- project
-    |   |   |   |-- modules
-    |   |   |   |-- files.tf
-    |   |   |   |-- production.tfvars    
+    |   |   |-- modules
+    |   |   |-- files.tf
+    |   |   |-- production.tfvars   
     |   |-- staging
-    |   |   |-- project
-    |   |   |   |-- modules
-    |   |   |   |-- files.tf
-    |   |   |   |-- staging.tfvars    
+    |   |   |-- modules
+    |   |   |-- files.tf
+    |   |   |-- staging.tfvars
     |   |-- development
-    |   |   |-- project
-    |   |   |   |-- modules
-    |   |   |   |-- files.tf
-    |   |   |   |-- development.tfvars
+    |   |   |-- modules
+    |   |   |-- files.tf
+    |   |   |-- development.tfvars
 ```
 
 Terraform Workflow:
