@@ -1,22 +1,33 @@
 # gcp-terraform-example
 Testing github actions with terraform
-    
+
+
+Directory structure example:
 ```
 |-- terraform-stacks
-    |-- aws
-    |   |-- project
-    |   |   |-- modules
-    |   |   |-- files.tf    
-    |-- azure
-    |   |-- project
-    |   |   |-- modules
-    |   |   |-- files.tf    
-    |-- google
-    |   |-- project
-    |   |   |-- modules
-    |   |   |-- files.tf    
+    |-- cloud-provider
+    |   |-- shared-serices
+    |   |   |-- project
+    |   |   |   |-- modules
+    |   |   |   |-- files.tf
+    |   |   |   |-- shared-services.tfvars    
+    |   |-- production
+    |   |   |-- project
+    |   |   |   |-- modules
+    |   |   |   |-- files.tf
+    |   |   |   |-- production.tfvars    
+    |   |-- staging
+    |   |   |-- project
+    |   |   |   |-- modules
+    |   |   |   |-- files.tf
+    |   |   |   |-- staging.tfvars    
+    |   |-- development
+    |   |   |-- project
+    |   |   |   |-- modules
+    |   |   |   |-- files.tf
+    |   |   |   |-- devlopment.tfvars
 ```
-
+Workflow for Terraform:
 ```mermaid
   graph TD;;
       A[Pull request workflow]-->B{Which cloud provider?};
@@ -35,15 +46,12 @@ Testing github actions with terraform
       W--Staging-->E3["Set staging.tfvars"];
       W--Development-->E4["Set dev.tfvars"];
       
-      E1--->P{Which Project?};
-      E2--->P{Which Project?};
-      E3--->P{Which Project?};      
-      E4--->P{Which Project?};
-
-      
-      P--Project Name-->T["Terraform Plan"];
-      
-      T--->V{"Validation Result"};
+      E1-->P[Terraform Plan];
+      E2-->P[Terraform Plan];
+      E3-->P[Terraform Plan];
+      E4-->P[Terraform Plan];
+         
+      P--->V{"Validation Result"};
             
       V--Fail-->K["End Workflow"];
       V--Pass-->F{"Reviewer Approval"};
