@@ -1,17 +1,17 @@
-name: 'Google: Shared Services - Project Example'
+name: 'Google: Shared Services'
 
 on:
   push:
     paths:
-    - 'terraform-stacks/google/shared-services/project-example/**'
+    - 'terraform-stacks/google/shared-services/**'
   pull_request:
     paths: 
-    - 'terraform-stacks/google/shared-services/project-example/**'
+    - 'terraform-stacks/google/shared-services/**'
 
 jobs:
 
   terraform:
-    name: 'Shared Services - Project Example'
+    name: 'Shared Services'
     runs-on: ubuntu-latest
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
