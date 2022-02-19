@@ -1,15 +1,17 @@
-name: 'Terraform Workflow'
+name: 'Terraform Google - Shared Services - Project Example'
 
 on:
   push:
-    branches:
-    - main
+    paths:
+    - 'terraform-stacks/google/shared/services/project-example/**'
   pull_request:
+    paths: 
+    - 'terraform-stacks/google/shared/services/**'
 
 jobs:
 
-  terraform-dev:
-    name: 'Terraform Dev'
+  terraform:
+    name: 'Terraform'
     runs-on: ubuntu-latest
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
