@@ -1,13 +1,11 @@
-name: Terraform Manual Approval
+name: Terraform Destroy
 
-# Controls when the action will run. Workflow runs when manually triggered using the UI
-# or API.
 on:
   workflow_dispatch:
     inputs:
       options:
         type: choice
-        description: 'Are you sure?'
+        description: 'This action will destroy everything. Are you sure?'
         options: 
         - 'NO'
         - 'YES'
