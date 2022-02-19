@@ -10,22 +10,22 @@ Directory structure example:
     |   |   |-- project
     |   |   |   |-- modules
     |   |   |   |-- files.tf
-    |   |   |   |-- project-shared-services.tfvars    
+    |   |   |   |-- shared-services.tfvars    
     |   |-- production
     |   |   |-- project
     |   |   |   |-- modules
     |   |   |   |-- files.tf
-    |   |   |   |-- project-production.tfvars    
+    |   |   |   |-- production.tfvars    
     |   |-- staging
     |   |   |-- project
     |   |   |   |-- modules
     |   |   |   |-- files.tf
-    |   |   |   |-- project-staging.tfvars    
+    |   |   |   |-- staging.tfvars    
     |   |-- development
     |   |   |-- project
     |   |   |   |-- modules
     |   |   |   |-- files.tf
-    |   |   |   |-- project-development.tfvars
+    |   |   |   |-- development.tfvars
 ```
 
 Terraform Workflow:
