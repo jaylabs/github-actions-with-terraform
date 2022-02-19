@@ -1,12 +1,12 @@
-name: 'Terraform Google - Shared Services - Project Example'
+name: 'Google: Shared Services - Project Example'
 
 on:
   push:
     paths:
-    - 'terraform-stacks/google/shared/services/project-example/**'
+    - 'terraform-stacks/google/shared-services/project-example/**'
   pull_request:
     paths: 
-    - 'terraform-stacks/google/shared/services/**'
+    - 'terraform-stacks/google/shared-services/project-example/**'
 
 jobs:
 
