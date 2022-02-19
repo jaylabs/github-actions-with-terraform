@@ -25,7 +25,7 @@ Directory structure example:
     |   |   |-- project
     |   |   |   |-- modules
     |   |   |   |-- files.tf
-    |   |   |   |-- project-devlopment.tfvars
+    |   |   |   |-- project-development.tfvars
 ```
 
 Terraform Workflow:
