@@ -1,17 +1,17 @@
-name: 'Google: Project Example - Production'
+name: 'Google: Production'
 
 on:
   push:
     paths:
-    - 'terraform-stacks/google/production/project-example/**'
+    - 'terraform-stacks/google/production/**'
   pull_request:
     paths: 
-    - 'terraform-stacks/google/production/project-example/**'
+    - 'terraform-stacks/google/production/**'
 
 jobs:
 
   terraform:
-    name: 'Project Example - Production'
+    name: 'Production'
     runs-on: ubuntu-latest
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
