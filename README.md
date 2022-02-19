@@ -1,6 +1,6 @@
-# gcp-terraform-example
-Testing github actions with terraform
+# Terraform Workflow Example
 
+Testing github actions with terraform.
 
 Directory structure example:
 ```
@@ -27,7 +27,9 @@ Directory structure example:
     |   |   |   |-- files.tf
     |   |   |   |-- devlopment.tfvars
 ```
-Workflow for Terraform:
+
+Terraform Workflow:
+
 ```mermaid
   graph TD;;
       A[Pull request workflow]-->B{Which cloud provider?};
