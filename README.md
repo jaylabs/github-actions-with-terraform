@@ -27,7 +27,7 @@ Directory structure example:
 Terraform Workflow:
 
 ```mermaid
-  graph TD;;
+  flowchart LR;
       A[Pull request workflow]-->B{Which cloud provider?};
 
      
