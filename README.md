@@ -6,7 +6,7 @@ Directory structure example:
 ```
 |-- terraform-stacks
     |-- cloud-provider
-    |   |-- shared-serices
+    |   |-- shared-services
     |   |   |-- modules
     |   |   |-- files.tf
     |   |   |-- shared-services.tfvars
